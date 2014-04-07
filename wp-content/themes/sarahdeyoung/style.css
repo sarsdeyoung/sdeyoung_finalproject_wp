@@ -123,6 +123,20 @@ a img {
 }
 
 /*--------------------------------------------------------------
+Global styles
+--------------------------------------------------------------*/
+div#page {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div.container {
+	width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
 body,
@@ -131,7 +145,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Quicksand';
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -340,8 +354,54 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+header#masthead {
+	width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#header-bkgrd {
+	background-image:url(images/header_bkg.jpg);
+	background-repeat:repeat-x;
+	height:17px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -1px;
+}
+
+div#header-logo {
+	position: relative;
+	top: 39px;
+	left: 39px;
+}
+
+/*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
+#menu-main-nav {
+	float: right;
+	margin-right: 34px;
+	margin-top:-5px;
+}
+
+.nav-menu li {
+	font-family: "futura-pt";
+	margin-left:84px;
+	font-size:	1.1em;
+	font-weight:400;
+	font-type:normal;
+}
+
+.nav-menu li a:link {
+	color:#514F4F;	
+}
+
+.nav-menu li a:hover {
+	color:#EE342A;	
+}
+
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
@@ -541,6 +601,58 @@ a:active {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+div#content {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#project-content {
+	border-top:1px dashed #f1f0EF;
+	margin-top: 45px;
+}
+
+#project-content > h1 {
+	font-family: "futura-pt";
+	font-size: 1.3em;
+	margin-top: 30px;
+}
+
+#project-content > h2 {
+	font-family: droid serif;
+	color: #CECDCC;
+	font-weight:lighter;
+	font-size: .9em;
+}
+
+#project-content > p {
+	width: 70%;
+	margin-top: 15px;
+}
+
+#project-content > img {
+	margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+footer#colophon{
+	background-image:url(images/footer_bkg.jpg);
+	background-repeat:repeat-x;
+	height:130px;	
+	margin-top:60px;
+}
+
+.site-footer h1 {
+	font-family: droid serif;
+	color: #F1F0EF;
+	font-weight:lighter;
+	font-size: .8em;
+	text-align: center;
+	margin-top:50px;
+}
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/

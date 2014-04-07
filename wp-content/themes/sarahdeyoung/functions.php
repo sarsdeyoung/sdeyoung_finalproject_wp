@@ -80,11 +80,51 @@ function sarahdeyoung_widgets_init() {
 }
 add_action( 'widgets_init', 'sarahdeyoung_widgets_init' );
 
+add_action( 'init', 'create_my_post_types' );
+
+/**
+ * Register custom post
+ */
+function create_my_post_types() {
+ register_post_type( 'Project', 
+ array(
+      'labels' => array(
+      	'name' => __( 'Projects' ),
+      	'singular_name' => __( 'Project' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New Project' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit Project' ),
+      	'new_item' => __( 'New Project' ),
+      	'view' => __( 'View Project' ),
+      	'view_item' => __( 'View Project' ),
+      	'search_items' => __( 'Search Projects' ),
+      	'not_found' => __( 'No Projects found' ),
+      	'not_found_in_trash' => __( 'No Projects found in Trash' ),
+      	'parent' => __( 'Parent Project' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'projects'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
+
 /**
  * Enqueue scripts and styles.
  */
 function sarahdeyoung_scripts() {
 	wp_enqueue_style( 'sarahdeyoung-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style('Droid Serif', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic', false, false, false );
+	wp_enqueue_style('Quicksand', 'http://fonts.googleapis.com/css?family=Quicksand', false, false, false );
 
 	wp_enqueue_script( 'sarahdeyoung-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -99,7 +139,7 @@ add_action( 'wp_enqueue_scripts', 'sarahdeyoung_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
