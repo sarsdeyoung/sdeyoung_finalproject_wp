@@ -77,6 +77,16 @@ function sarahdeyoung_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 1',
+		'id' => 'footer-sidebar-1',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'sarahdeyoung_widgets_init' );
 
@@ -123,7 +133,7 @@ function create_my_post_types() {
 function sarahdeyoung_scripts() {
 	wp_enqueue_style( 'sarahdeyoung-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style('Droid Serif', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic', false, false, false );
+	
 	wp_enqueue_style('Quicksand', 'http://fonts.googleapis.com/css?family=Quicksand', false, false, false );
 
 	wp_enqueue_script( 'sarahdeyoung-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

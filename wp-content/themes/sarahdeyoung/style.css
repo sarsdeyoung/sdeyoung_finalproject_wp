@@ -402,14 +402,41 @@ div#header-logo {
 	color:#EE342A;	
 }
 
+.sub-menu {
+	background-color:#f2f1ef;
+	font-size:.9em;	
+	border-top: 6px solid #EE342A;
+}
+
+#menu-item-28 > ul {
+	width: 185px;
+	margin-left: -75px;
+}
+
+#menu-item-28 > ul > li {
+	margin-top: 10px;
+	margin-left: 0px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.main-navigation ul ul li {
+	border-bottom: 1px solid #CCC;
+	width: 185px;
+}
+
+
+
+
+
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #514F4F;
 }
 a:visited {
-	color: purple;
+	color: #514F4F;
 }
 a:hover,
 a:focus,
@@ -440,7 +467,6 @@ a:active {
 	text-decoration: none;
 }
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
@@ -453,7 +479,7 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 200px;
+
 }
 .main-navigation ul ul li {
 }
@@ -503,6 +529,7 @@ a:active {
 	text-align: right;
 	width: 50%;
 }
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -607,6 +634,42 @@ div#content {
 	margin-right: auto;
 }
 
+#main > div.intro > h2 {
+	font-size: 2.2em;
+	width: 650px;
+	text-align: center;
+	color: #EE342A;
+	position: relative;
+	left: 150px;
+	top: 50px;
+	line-height: 1.45em;
+	letter-spacing: .02em;
+	font-family: "droid-serif",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+#homepage-projects > h3 {
+	font-family: "futura-pt";
+	font-size: 1.2em;
+	margin-top: 38px;
+	margin-bottom:15px;
+}
+
+#homepage-projects {
+	border-top:1px dashed #f1f0EF;
+	margin-top: 85px;	
+}
+
+#homepage-projects > img:nth-child(2) {
+	margin-right: 15px;
+}
+
+#homepage-projects > img:nth-child(4) {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
 #project-content {
 	border-top:1px dashed #f1f0EF;
 	margin-top: 45px;
@@ -642,6 +705,7 @@ footer#colophon{
 	background-repeat:repeat-x;
 	height:130px;	
 	margin-top:60px;
+	margin-bottom:-23px;
 }
 
 .site-footer h1 {
@@ -650,7 +714,22 @@ footer#colophon{
 	font-weight:lighter;
 	font-size: .8em;
 	text-align: center;
-	margin-top:50px;
+	margin-top:34px;
+}
+
+#text-2 > div > div > a > img {
+	margin-right: 30px;
+}
+
+#text-2 > div {
+	position: relative;
+	top: 30px;
+	left: 415px;
+}
+
+#text-2 > div > div > a:nth-child(3) > img {
+	position: relative;
+	top: 1px;
 }
 
 /*--------------------------------------------------------------
