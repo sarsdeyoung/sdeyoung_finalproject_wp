@@ -34,7 +34,7 @@
 	<header id="masthead" class="site-header" role="banner">
         
         <div id="header-logo">
-        	<a href="http://localhost:8888/sdeyoung_finalproject_wp/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdy_logo.jpg" /></a>
+        	<a href="http://www.sarahdeyoung.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sdy_logo.jpg" /></a>
 		</div>
         
         <div class="site-branding">
