@@ -14,16 +14,34 @@ get_header(); ?>
 
 			<div id="homepage-projects">
             	<h3>my work</h3>
-            
-           		<?php if(get_field('homepage_image_gallery')): $i=0; ?>
                 
-     
-                <?php while(has_sub_field('homepage_image_gallery')): $i++; ?>
-                						
-                        <img src="<?php $image = get_sub_field('homepage_image'); echo $image['url'] ?>" />
-                           
-				<?php endwhile; ?>
-                <?php endif; ?>
+                <?php
+					$args = array( 'post_type' => 'project' );
+					$projects = new WP_Query( $args );
+				?>
+
+                <?php if ( $projects -> have_posts() ) : ?>
+
+			<?php /* Start the Loop */ ?>
+
+        <?php while ( $projects -> have_posts() ) : $projects -> the_post(); ?>
+
+            <?php if ( has_post_thumbnail()) : ?>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+                    <div class="thumbnails"><?php the_post_thumbnail(); ?></div>
+                </a>
+            <?php endif; ?>
+
+			<?php endwhile; ?>
+
+			<?php sarahdeyoung_paging_nav(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'content', 'none' ); ?>
+
+		<?php endif; ?>
+
                 
     		</div>
 

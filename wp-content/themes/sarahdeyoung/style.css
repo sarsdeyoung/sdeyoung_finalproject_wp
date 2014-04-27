@@ -395,11 +395,16 @@ div#header-logo {
 }
 
 .nav-menu li a:link {
-	color:#514F4F;	
+	color:#514F4F;
+	-webkit-transition: color 300ms ease-in-out;
+-moz-transition: color 300ms ease-in-out;
+-ms-transition: color 300ms ease-in-out;
+-o-transition: color 300ms ease-in-out;
+transition: color 300ms ease-in-out;	
 }
 
 .nav-menu li a:hover {
-	color:#EE342A;	
+	color: #EE342A;
 }
 
 .sub-menu {
@@ -451,7 +456,7 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
+	width: 99%;
 }
 .main-navigation ul {
 	list-style: none;
@@ -625,6 +630,20 @@ a:active {
 	display: none;
 }
 
+.textwidget a:link{
+	-webkit-transition: 300ms ease-in-out;
+	-moz-transition: 300ms ease-in-out;
+	-ms-transition: 300ms ease-in-out;
+	-o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;	
+}
+
+.textwidget a:hover {
+	opacity: .4;
+}
+
+
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -696,6 +715,30 @@ div#content {
 #project-content > img {
 	margin-bottom: 20px;
 }
+
+div#homepage-projects {
+	width: 960px;
+}
+
+img.attachment-post-thumbnail.wp-post-image {
+	float: right;
+	margin-bottom: 20px;
+	margin-right:20px;
+}
+
+            
+.thumbnails{
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.thumbnails:hover {
+	opacity: .7;
+}
+
 
 /*--------------------------------------------------------------
 Footer
